@@ -10,5 +10,4 @@ const Photo=(props)=>{
     )
 }
 
-
 export default Photo
