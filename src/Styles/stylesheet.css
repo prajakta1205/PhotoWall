@@ -1,0 +1,22 @@
+html{
+    font-size: 10px;
+}
+
+h1{
+    font-family: cursive;
+    text-align: center;
+    font-size: 13rem;
+    font-weight: 900;
+    margin: 2rem 0;
+    letter-spacing: -1px;
+    color: #000;
+}
+
+@font-face {
+    font-family: 'billabong';
+    src: url("https://cdn.rawgit.com/milktronics/beaglegr.am/master/public/fonts/billabong-webfont.eot");
+}
+
+.photoGrid{
+    max-width: 1000;
+}
