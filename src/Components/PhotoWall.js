@@ -7,7 +7,8 @@ const PhotoWall= (props)=>{
     console.log(props)
   return (
     <div>
-        <button onClick={props.onNavigate} className="addIcon"></button>
+        <a className="addIcon" onClick={props.onNavigate} href="#AddPhoto"> </a>
+        {/* <button onClick={props.onNavigate} className="addIcon"></button> */}
         <div className="photoGrid">{listR.map((listR,index) => 
             (<Photo key={index} listR={listR}
                 onRemovephoto={props.onRemovePhoto}
