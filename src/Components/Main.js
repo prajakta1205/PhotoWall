@@ -40,10 +40,14 @@ class Main extends Component {
 
          ]
       }
+      this.removePhoto=this.removePhoto.bind(this);
    }
 
    removePhoto(postRemove){
       console.log(postRemove.description)
+      this.setState((state)=>({
+         posts: state.posts.filter(posts => posts!== postRemove)
+      }))
    }
 
     render(){
