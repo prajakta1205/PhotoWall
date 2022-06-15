@@ -61,3 +61,13 @@ h1{
     line-height: 2;
     padding: 5px;
 }
+
+.addIcon{
+    margin: 20px auto;
+    display: table;
+    padding: 40px;
+    background: url("../icon/plus.png");
+    background-size: contain;
+    border: none;
+    max-height: 88px;
+}
