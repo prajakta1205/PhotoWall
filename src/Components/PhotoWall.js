@@ -5,12 +5,16 @@ import {Link} from 'react-router-dom';
 
 const PhotoWall= (props)=>{
     const listR=props.posts;
-    console.log(props)
+    console.log(listR)
   return (
     <div>
         <Link className="addIcon" onClick={props.onNavigate} to="/AddPhoto"> </Link>
         {/* <button onClick={props.onNavigate} className="addIcon"></button> */}
-        <div className="photoGrid">{listR.map((listR,index) => 
+        <div className="photoGrid">{listR
+        .sort(function(x,y){
+            return y.id-x.id
+        })
+        .map((listR,index) => 
             (<Photo key={index} listR={listR}
                 onRemovephoto={props.onRemovePhoto}
         />))}

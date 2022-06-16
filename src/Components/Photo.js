@@ -3,8 +3,8 @@ import React  from "react";
 import PropTypes from 'prop-types';
 
 const Photo=(props)=>{
-    console.log(props);
     const post=props.listR;
+    console.log(post)
     return(
         <figure className="figure">
             <img className="photo" src={post.imageLink} alt={post.description}/>
