@@ -17,8 +17,7 @@ const Photo=(props)=>{
 }
 
 Photo.propTypes={
-    post:PropTypes.array.isRequired,
-    onRemovephoto:PropTypes.func.isRequired
+    post:PropTypes.array.isRequired
 }
 
 export default Photo
