@@ -14,14 +14,16 @@ const AddPhoto=(props)=>{
         if(description && imageLink)
         {
             //console.log(props);
-            props.onaddPhoto(post)
+            props.addPost(post)
+            props.onHistory.push('/')
+            //props.onaddPhoto(post)
         }
         console.log('hi');
     };
 
     return(
         <div>
-            <h1>Photowall</h1>
+            {/* <h1>Photowall</h1> */}
             <div className="form">
                 <form onSubmit={handleSubmit}>
                     <input type="text" placeholder="Link" name="Link"></input>
