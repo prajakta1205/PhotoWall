@@ -4,15 +4,17 @@ import Comments from "./Comments";
 
 const Single =(props)=>{
     console.log(props)
+    console.log('hi')
     const {match, posts} = props
         const id = Number(match.params.id)
         const post = posts.find((post) => post.id === id)
-    console.log(id)
+        const comments=props.comments
+    console.log(comments)
     return(
        
         <div className="single-photo">
             <Photo post={post}/>
-            <Comments/>
+            <Comments addComment={props.addComment} comments={comments}/>
         </div>
 
     )
