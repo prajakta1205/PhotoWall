@@ -1,5 +1,6 @@
 import React from "react";
 import Photo from "./Photo";
+import Comments from "./Comments";
 
 const Single =(props)=>{
     console.log(props)
@@ -11,6 +12,7 @@ const Single =(props)=>{
        
         <div className="single-photo">
             <Photo post={post}/>
+            <Comments/>
         </div>
 
     )
