@@ -11,7 +11,10 @@ const Photo=(props)=>{
             <Link to={`/single/${post.id}`}><img className="photo" src={post.imageLink} alt={post.description}/></Link>
             <figcaption><p>{post.description}</p></figcaption>
             <div className="button-container">
-            <button className="remove-button" onClick={()=>{props.removePost(props.index)}}>Remove</button>
+            <button className="remove-button" onClick={()=>{
+                props.removePost(props.index)
+                props.history.push('/')
+                }}>Remove</button>
             </div>
         </figure>
     )

@@ -14,14 +14,14 @@ const Comments=(props)=>{
     return(
         
         <div className="comment">
-            {/* {
-                post.map((comment, index) => {
+            {
+                props.comments.map((comment, index) => {
                     return (
                         <p key={index}> {comment} </p>
                     )
                 })
             }
-             */}
+            
        
             <div className="comment" onSubmit={handleSubmit}>
                 <form className="comment-form">
