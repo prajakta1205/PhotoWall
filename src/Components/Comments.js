@@ -1,15 +1,16 @@
 import React from "react";
 
 const Comments=(props)=>{
-    console.log(props.addComment)
+    console.log(props)
     let handleSubmit=(e) =>{
         e.preventDefault();
         const comment=e.target.elements.comment.value
-        props.addComment(comment)
+        console.log(comment+''+props.id)
+        props.addComment(comment,props.id)
         e.target.elements.comment.value = ''
     }
-    const post=props.comments
-    console.log(post)
+    //const post=props.comments
+    console.log(props.comments)
     return(
         
         <div className="comment">
