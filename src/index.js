@@ -3,13 +3,14 @@ import React  from "react";
 import './Styles/stylesheet.css';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from "react-router-dom";
-import { createStore } from "redux";
+import { createStore,applyMiddleware } from "redux";
 import rootReducer from './redux/reducer'
 import {Provider} from 'react-redux'
- import App from './Components/App'
+import App from './Components/App'
+import thunk from 'redux-thunk'
 
 
-const store=createStore(rootReducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const store=createStore(rootReducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), applyMiddleware(thunk));
 
 const container = document.getElementById('root');
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
